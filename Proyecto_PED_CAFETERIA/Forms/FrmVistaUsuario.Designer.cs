@@ -38,23 +38,23 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panelFill = new System.Windows.Forms.Panel();
-            this.Bienvenida = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cup2 = new System.Windows.Forms.PictureBox();
             this.cup1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Bienvenida = new System.Windows.Forms.TextBox();
             this.panelLateral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelFill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLateral
@@ -89,6 +89,7 @@
             this.button8.TabIndex = 7;
             this.button8.Text = "Proveedores";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // btnPerfil
             // 
@@ -133,6 +134,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Inventario";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -147,6 +149,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Historial";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -192,6 +195,17 @@
             this.button1.Text = "Inicio";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Proyecto_PED_CAFETERIA.Properties.Resources.ESRTA_ES_LA_BUENA_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(152, 91);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -248,21 +262,6 @@
             this.panelFill.TabIndex = 2;
             this.panelFill.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFill_Paint);
             // 
-            // Bienvenida
-            // 
-            this.Bienvenida.BackColor = System.Drawing.Color.PeachPuff;
-            this.Bienvenida.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Bienvenida.Font = new System.Drawing.Font("Unispace", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bienvenida.ForeColor = System.Drawing.Color.Black;
-            this.Bienvenida.Location = new System.Drawing.Point(179, 269);
-            this.Bienvenida.Multiline = true;
-            this.Bienvenida.Name = "Bienvenida";
-            this.Bienvenida.Size = new System.Drawing.Size(298, 67);
-            this.Bienvenida.TabIndex = 3;
-            this.Bienvenida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Bienvenida.Visible = false;
-            this.Bienvenida.TextChanged += new System.EventHandler(this.Bienvenida_TextChanged);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::Proyecto_PED_CAFETERIA.Properties.Resources.ESRTA_ES_LA_BUENA_1;
@@ -299,16 +298,20 @@
             this.cup1.TabStop = false;
             this.cup1.Visible = false;
             // 
-            // pictureBox1
+            // Bienvenida
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Proyecto_PED_CAFETERIA.Properties.Resources.ESRTA_ES_LA_BUENA_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 91);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.Bienvenida.BackColor = System.Drawing.Color.PeachPuff;
+            this.Bienvenida.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Bienvenida.Font = new System.Drawing.Font("Unispace", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bienvenida.ForeColor = System.Drawing.Color.Black;
+            this.Bienvenida.Location = new System.Drawing.Point(179, 269);
+            this.Bienvenida.Multiline = true;
+            this.Bienvenida.Name = "Bienvenida";
+            this.Bienvenida.Size = new System.Drawing.Size(298, 67);
+            this.Bienvenida.TabIndex = 3;
+            this.Bienvenida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Bienvenida.Visible = false;
+            this.Bienvenida.TextChanged += new System.EventHandler(this.Bienvenida_TextChanged);
             // 
             // FrmVistaUsuario
             // 
@@ -321,10 +324,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmVistaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmVistaUsuario";
+            this.Text = "FrmVistaAdmin";
             this.Load += new System.EventHandler(this.FrmVistaUsuario_Load);
             this.panelLateral.ResumeLayout(false);
             this.panelLateral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelFill.ResumeLayout(false);
@@ -332,7 +336,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

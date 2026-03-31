@@ -9,6 +9,8 @@ namespace CAFETERIA.ClasesNuevas
     public class ListaProductos
     {
         public Nodo_ListaProductos Primero;
+       
+       
 
         public string ObtenerProductosTexto()
         {
@@ -17,25 +19,51 @@ namespace CAFETERIA.ClasesNuevas
                 return "Sin productos";
             }
 
-            string texto = "";
+            StringBuilder texto = new StringBuilder();
             Nodo_ListaProductos actual = Primero;
 
             while (actual != null)
             {
-                texto += actual.ProductoGuardado.NombreProducto
+                texto.Append (actual.ProductoGuardado.NombreProducto
                       + " x"
-                      + actual.ProductoGuardado.Cantidad + "\n";
+                      + actual.ProductoGuardado.Cantidad);
 
                 
                 if (actual.siguiente != null)
                 {
-                    texto += " | ";
+                    texto.AppendLine();
                 }
 
                 actual = actual.siguiente;
             }
 
-            return texto;
+            return texto.ToString();
+        }
+        
+
+
+        //metodo para eliminar un producto del carrito
+        public void EliminarProducto(string nombreProducto)
+        {
+            if (Primero == null)
+            {
+                return;
+            }
+            if (Primero.ProductoGuardado.NombreProducto.Equals(nombreProducto, StringComparison.OrdinalIgnoreCase))
+            {
+                Primero = Primero.siguiente;
+                return;
+            }
+            Nodo_ListaProductos actual = Primero;
+            while (actual.siguiente != null)
+            {
+                if (actual.siguiente.ProductoGuardado.NombreProducto.Equals(nombreProducto, StringComparison.OrdinalIgnoreCase))
+                {
+                    actual.siguiente = actual.siguiente.siguiente;
+                    return;
+                }
+                actual = actual.siguiente;
+            }
         }
 
         public void AgregarProducto(Producto p)

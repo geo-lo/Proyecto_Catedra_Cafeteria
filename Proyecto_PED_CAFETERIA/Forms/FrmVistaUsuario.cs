@@ -40,6 +40,11 @@ namespace Proyecto_PED_CAFETERIA.Forms
             form.Dock = DockStyle.Fill;
             panelFill.Controls.Add(form);
             panelFill.Tag = form;
+            form.BackColor = Color.FromArgb(255, 255, 255);                  //estilo del menu lateral
+            form.ForeColor = Color.FromArgb(0, 0, 0);
+            form.Font = new Font("Unispace", 7, FontStyle.Regular);
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.StartPosition = FormStartPosition.CenterScreen;
             form.Show();
         }
 
@@ -48,6 +53,7 @@ namespace Proyecto_PED_CAFETERIA.Forms
             
             ClaseGlobal.listaTemporal = new ListaProductos();
             AbrirForms(new FrmPedirOrden());
+         
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -119,6 +125,54 @@ namespace Proyecto_PED_CAFETERIA.Forms
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void estiloForm(Form frm)
+        {
+            frm.BackColor = Color.FromArgb(255, 255, 255);
+            frm.ForeColor = Color.FromArgb(0, 0, 0);
+            frm.Font = new Font("Unispace", 8, FontStyle.Regular);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
+            frm.MaximizeBox = false;
+            frm.MinimizeBox = false;
+        }
+
+        private void btnCarrito_Click(object sender, EventArgs e)
+        {
+            //si el carrito esta vacio, mostrar mensaje de error
+            frmCarrito carrito = new frmCarrito();
+            estiloForm(carrito);
+            carrito.ShowDialog();
+
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            //boton que minimiza la ventana
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void btnSalir2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbrirForms(new PedidosPreparados());
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+          AbrirForms(new Inventario());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AbrirForms(new Proveedores());
         }
     }
 }

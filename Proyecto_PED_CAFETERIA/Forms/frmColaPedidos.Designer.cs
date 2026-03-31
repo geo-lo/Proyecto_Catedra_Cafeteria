@@ -32,6 +32,8 @@
             this.C = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.p = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.t = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,12 +73,39 @@
             this.t.Name = "t";
             this.t.ReadOnly = true;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Red;
+            this.btnSalir.Location = new System.Drawing.Point(78, 290);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(93, 38);
+            this.btnSalir.TabIndex = 1;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btn2
+            // 
+            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn2.Location = new System.Drawing.Point(214, 290);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(93, 38);
+            this.btn2.TabIndex = 2;
+            this.btn2.Text = "Procesar";
+            this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
+            // 
             // frmColaPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Proyecto_PED_CAFETERIA.Properties.Resources.descarga__1_2;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn2);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvPedidos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmColaPedidos";
@@ -93,5 +122,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn C;
         private System.Windows.Forms.DataGridViewTextBoxColumn p;
         private System.Windows.Forms.DataGridViewTextBoxColumn t;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btn2;
     }
 }

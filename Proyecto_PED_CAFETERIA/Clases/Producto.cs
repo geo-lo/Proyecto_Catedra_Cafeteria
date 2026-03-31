@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CAFETERIA.ClasesNuevas
 {
@@ -13,14 +15,22 @@ namespace CAFETERIA.ClasesNuevas
         public int Cantidad { get; set; }
 
         public Double Precio { get; set; }
-        public Double Total { get; set; }
+        public Button Boton { get; set; }
+        public string Categoria { get; set; }
+        public Image Imagen { get; set; }
 
-        public Producto(string nombreProducto, int cantidad, double precio)
+        public double Total
+        {
+            get { return Cantidad * Precio; }
+        }
+        public Producto(string nombreProducto, int cantidad, double precio,Button boton, string categoria,Image imagen)
         {
             NombreProducto = nombreProducto;
             Cantidad = cantidad;
             Precio = precio;
-            Total = cantidad * precio;
+            Boton = boton;
+            Categoria = categoria;
+            Imagen = imagen;
         }
     }
 }

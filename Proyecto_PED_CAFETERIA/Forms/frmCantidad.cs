@@ -17,6 +17,7 @@ namespace Proyecto_PED_CAFETERIA.Forms
         // Variables para almacenar la información del producto seleccionado
         string nombreProducto;
         Double precioProducto;
+
         Image imagenProducto;
         string DescripcionProducto;
         public frmCantidad()
@@ -38,14 +39,18 @@ namespace Proyecto_PED_CAFETERIA.Forms
         // su descripción y se configura el estilo del texto
         private void frmCantidad_Load(object sender, EventArgs e)
         {
-          imagen.Image = imagenProducto;
+           
+            lblPre.Text = "Precio: $" + precioProducto.ToString("0.00");
+            lblPre.Font = new Font("UNISPACE", 9, FontStyle.Bold);
+            txtDesc.Text = DescripcionProducto;
+            txtDesc.Font = new Font("UNISPACE", 9, FontStyle.Regular);
+            txtDesc.SelectionStart = 0;
+            txtDesc.SelectionLength = 0;
+            txtDesc.BackColor = this.BackColor;
+            imagen.Image = imagenProducto;
             imagen.SizeMode = PictureBoxSizeMode.Zoom;
-            lblDesc.Text = DescripcionProducto;
-            lblDesc.ForeColor = Color.FromArgb(100, 60, 30);
-            lblDesc.TextAlign = ContentAlignment.TopRight;
-            lblDesc.Font = new Font("UNISPACE", 7, FontStyle.Bold);
-
-
+            numericUpDown1.Value = 1;
+            actualizarPrecio();
         }
 
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
@@ -65,11 +70,11 @@ namespace Proyecto_PED_CAFETERIA.Forms
 
             }
             int cantidad = int.Parse(numericUpDown1.Text);
-            Producto prod = new Producto(nombreProducto, cantidad, precioProducto);
+            Producto prod = new Producto(nombreProducto, cantidad, precioProducto,btnAceptar,"Categoria",imagenProducto);
 
             ClaseGlobal.listaTemporal.AgregarProducto(prod);
 
-            MessageBox.Show("Producto Agregado");
+            MessageBox.Show("Producto Agregado al Carrito","EXITO");
             this.Close();
         }
 
@@ -81,7 +86,16 @@ namespace Proyecto_PED_CAFETERIA.Forms
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
+         actualizarPrecio();
 
+        }
+        // Método para actualizar el precio total
+        // en función de la cantidad ingresada por el usuario
+        private void actualizarPrecio()
+        {
+            int cantidad = (int)numericUpDown1.Value;
+            Double precioTotal = cantidad * precioProducto;
+            lblPre.Text = "Precio: $" + precioTotal.ToString("0.00");
         }
 
         private void frmCantidad_KeyDown(object sender, KeyEventArgs e)
@@ -92,6 +106,11 @@ namespace Proyecto_PED_CAFETERIA.Forms
             {
                 validarCantidad();
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

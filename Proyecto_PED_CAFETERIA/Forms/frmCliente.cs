@@ -58,9 +58,9 @@ namespace Proyecto_PED_CAFETERIA.Forms
         {
             lblN.Visible = true;
             lblN.ForeColor = Color.FromArgb(100, 60, 30);
-            lblN.Font = new Font("UNISPACE", 7, FontStyle.Bold);
-            lblN.Text = "¡Bienvenido!\nPor favor, ingresa tu nombre para comenzar tu pedido.\n" +
-                "Este nombre se utilizara para identificar su Pedido";
+            lblN.Font = new Font("UNISPACE", 10, FontStyle.Bold);
+            lblN.Text = "¡Bienvenido!\nPor favor, ingresa algun nombre.\n" +
+                "Este nombre se utilizara para\nidentificar su Pedido";
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)

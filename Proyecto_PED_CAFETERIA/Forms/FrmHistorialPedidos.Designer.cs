@@ -32,6 +32,9 @@
             this.c = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.p = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.t = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPreparar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +51,7 @@
             this.dgvHistorial.ReadOnly = true;
             this.dgvHistorial.Size = new System.Drawing.Size(523, 211);
             this.dgvHistorial.TabIndex = 0;
+            this.dgvHistorial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorial_CellContentClick);
             // 
             // c
             // 
@@ -70,12 +74,54 @@
             this.t.Name = "t";
             this.t.ReadOnly = true;
             // 
+            // btnPreparar
+            // 
+            this.btnPreparar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPreparar.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreparar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPreparar.Location = new System.Drawing.Point(95, 333);
+            this.btnPreparar.Name = "btnPreparar";
+            this.btnPreparar.Size = new System.Drawing.Size(75, 23);
+            this.btnPreparar.TabIndex = 1;
+            this.btnPreparar.Text = "Preparar";
+            this.btnPreparar.UseVisualStyleBackColor = true;
+            this.btnPreparar.Click += new System.EventHandler(this.btnPreparar_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.Color.Red;
+            this.btnBorrar.Location = new System.Drawing.Point(206, 333);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrar.TabIndex = 2;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.Fuchsia;
+            this.btnEdit.Location = new System.Drawing.Point(321, 333);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Editar";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
             // FrmHistorialPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 320);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.btnPreparar);
             this.Controls.Add(this.dgvHistorial);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmHistorialPedidos";
             this.Text = "FrmHistorialPedidos";
             this.Load += new System.EventHandler(this.FrmHistorialPedidos_Load);
@@ -90,5 +136,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn c;
         private System.Windows.Forms.DataGridViewTextBoxColumn p;
         private System.Windows.Forms.DataGridViewTextBoxColumn t;
+        private System.Windows.Forms.Button btnPreparar;
+        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

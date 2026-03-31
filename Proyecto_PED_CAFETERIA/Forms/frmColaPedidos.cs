@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace Proyecto_PED_CAFETERIA.Forms
         {
             InitializeComponent();
             MostrarPedidos();
-            
+
         }
         public void MostrarPedidos()
         {
@@ -38,7 +39,7 @@ namespace Proyecto_PED_CAFETERIA.Forms
                     productoTexto,
                     p.CalcularTotal(),
                     p.ProductosSeleccionados,
-                    p.Total
+                    p.Total + "$"
                 );
 
                 actual = actual.siguiente;
@@ -47,17 +48,26 @@ namespace Proyecto_PED_CAFETERIA.Forms
 
         private void frmColaPedidos_Load(object sender, EventArgs e)
         {
+            dgvPedidos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvPedidos.MultiSelect = false;
+            dgvPedidos.ReadOnly = true;
+            dgvPedidos.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+
             MostrarPedidos();
             estiloDataGrid(dgvPedidos);
             foreach (DataGridViewColumn col in dgvPedidos.Columns)
             {
                 col.Frozen = false;
             }
-          
+
 
         }
         private void estiloDataGrid(DataGridView dataHistorial)
         {
+            dataHistorial.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataHistorial.Columns[2].DefaultCellStyle.Format = "$0.00";
+
+            dataHistorial.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataHistorial.BorderStyle = BorderStyle.None;
             dataHistorial.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
             dataHistorial.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -83,7 +93,44 @@ namespace Proyecto_PED_CAFETERIA.Forms
 
         private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            //este boton se encargara de eliminar el pedido seleccionado de la cola y
+            //agregarlo al historial
+            if (dgvPedidos.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecciona un pedido", "Aviso");
+                return;
+            }
+
+            int index = dgvPedidos.SelectedRows[0].Index;
+
             
+            Pedido pedido = ClaseGlobal.colaPedidos.EliminarPorSeleccion(index);
+
+            if (pedido == null)
+            {
+                MessageBox.Show("Error al procesar pedido");
+                return;
+            }
+
+            string cliente = pedido.nombreCliente;
+            string productos = pedido.ProductosSeleccionados.ObtenerProductosTexto();
+            string total = pedido.CalcularTotal().ToString("0.00") + "$";
+
+           
+            ClaseGlobal.historial.Agregar(cliente, productos, total);
+            MostrarPedidos();
+
+            MessageBox.Show("Pedido procesado correctamente", "Éxito");
+        }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+           Application.Exit();
+
         }
     }
 }

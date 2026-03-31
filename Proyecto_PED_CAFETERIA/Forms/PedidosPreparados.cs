@@ -16,5 +16,10 @@ namespace Proyecto_PED_CAFETERIA.Forms
         {
             InitializeComponent();
         }
+
+        private void PedidosPreparados_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
