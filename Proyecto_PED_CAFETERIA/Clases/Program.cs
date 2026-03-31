@@ -17,7 +17,7 @@ namespace CAFETERIA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmVistaUsuario());
+            Application.Run(new frmLogin());
         }
     }
 }
