@@ -8,6 +8,7 @@ Listo
 
 //INSTALAR DATABASE ANTES DE CORRER EL PROGRAMA 
 ir a la clase "ConexionDB" y cambiar "Server=LAPODEROS" por el nombre de su instancia en SQL o el nombre de su equipo
+ejemplo "Server=Nombre de su equipo o instancia"
 
 //Como funciona el Programa......
 Cuando el programa se inicia se mostrara una pequeña pantalla de carga, al lado izquierdo encontraremos un panel con botones los 
