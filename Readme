@@ -6,6 +6,9 @@ ir al repositorio en github y dar click en boton verde "Code" y copiar el link
 en visual pegaremos el link donde dice "Ubicacion del Repositorio"
 Listo
 
+//INSTALAR DATABASE ANTES DE CORRER EL PROGRAMA 
+ir a la clase "ConexionDB" y cambiar "Server=LAPODEROS" por el nombre de su instancia en SQL o el nombre de su equipo
+
 //Como funciona el Programa......
 Cuando el programa se inicia se mostrara una pequeña pantalla de carga, al lado izquierdo encontraremos un panel con botones los 
 cuales nos dejaran navegar por las diferentes partes del programa, si damos click en el boton "Inicio"
