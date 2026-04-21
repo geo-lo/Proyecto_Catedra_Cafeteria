@@ -100,6 +100,7 @@ namespace Proyecto_PED_CAFETERIA.Forms
             dgvInventario.DataSource = repo.MostrarInventario();
         }
 
+        //Muestra el inventario al cargar el formulario en el datagridview
         private void Inventario_Load(object sender, EventArgs e)
         {
             dgvInventario.DataSource = new ConsultasDB().MostrarInventario();
