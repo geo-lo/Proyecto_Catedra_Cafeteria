@@ -16,8 +16,8 @@ namespace Proyecto_PED_CAFETERIA.Clases
         // los productos seleccionados por el cliente
         // cumple la funcion de un carrito
         public static ListaProductos listaTemporal = new ListaProductos();
-        public static ClaseParaBusqueda_Productos buscadorProductos = new ClaseParaBusqueda_Productos();
-        public static HistialPedido historial = new HistialPedido();
+        //public static ClaseParaBusqueda_Productos buscadorProductos = new ClaseParaBusqueda_Productos();
+        public static HistorialPedido historial = new HistorialPedido();
 
     }
 

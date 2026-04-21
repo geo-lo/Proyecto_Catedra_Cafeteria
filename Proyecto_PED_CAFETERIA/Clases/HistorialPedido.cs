@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_PED_CAFETERIA.Clases
 {
-    internal class HistialPedido
+    internal class HistorialPedido
     {
         public NodoHistorial Primero;
         public NodoHistorial Ultimo;

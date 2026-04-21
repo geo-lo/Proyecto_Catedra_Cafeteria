@@ -63,12 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClaseGlobal.cs" />
-    <Compile Include="Clases\ClaseParaBusqueda_Productos.cs" />
     <Compile Include="Clases\ConexionDB.cs" />
     <Compile Include="Clases\ConsultasDB.cs" />
-    <Compile Include="Clases\HistialPedido.cs" />
+    <Compile Include="Clases\HistorialPedido.cs" />
     <Compile Include="Clases\NodoHistorial.cs" />
-    <Compile Include="Clases\NodoParaBusqueda_Productos.cs" />
     <Compile Include="Clases\ColaPedidos.cs" />
     <Compile Include="Clases\ListaProductos.cs" />
     <Compile Include="Clases\Nodo_ColaPedidos.cs" />

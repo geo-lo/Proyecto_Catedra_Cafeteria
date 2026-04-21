@@ -43,68 +43,11 @@ namespace Proyecto_PED_CAFETERIA.Forms
 
         private void FrmProductos_Load(object sender, EventArgs e)
         {
-            //llenamos el buscador de productos con los productos disponibles
-            // Cada producto se agrega al buscador con su nombre, precio, imagen y descripción
-           
-            AgregarProducto("Pan", 1, 1.50, btnPan, "Comida", btnPan.Image);
-            AgregarProducto("Jugo Natural", 1, 1.75, btnJugo, "Bebida", btnJugo.Image);
-            AgregarProducto("Papas Fritas", 1, 1.25, btnPapas, "Snack", btnPapas.Image);
-            AgregarProducto("Pastel", 1, 1.50, btnPastel, "Postre", btnPastel.Image);
-            AgregarProducto("Dona Glaseada", 1, 1.25, button1, "Postre", button1.Image);
-            AgregarProducto("Galletas de Chocolate", 1, 1.00, button2, "Postre", button2.Image);
-            AgregarProducto("Agua", 1, 1.00, btnAgua, "Bebida", btnAgua.Image);
-            AgregarProducto("Sandwich", 1, 2.50, button3, "Comida", button3.Image);
-            AgregarProducto("Pancakes", 1, 2.00, button4, "Comida", button4.Image);
-            AgregarProducto("Barra de Chocolate", 1, 1.25, button5, "Snack", button5.Image);
-            AgregarProducto("Helado", 1, 1.50, button6, "Postre", button6.Image);
-            AgregarProducto("Hot Dog", 1, 2.50, button7, "Comida", button7.Image);
-            AgregarProducto("Cupcakes", 1, 1.75, button8, "Postre", button8.Image);
-            AgregarProducto("Croissant", 1, 1.75, button12, "Comida", button12.Image);
-            AgregarProducto("Waffles", 1, 2.00, button11, "Comida", button11.Image);
-            AgregarProducto("Té Helado", 1, 1.25, button15, "Bebida", button15.Image);
-            AgregarProducto("Coca-Cola", 1, 1.50, button16, "Bebida", button16.Image);
-            AgregarProducto("Café Frío", 1, 1.75, button17, "Bebida", button17.Image);
-            AgregarProducto("Café Caliente", 1, 1.75, button18, "Bebida", button18.Image);
-            AgregarProducto("Batido de Fresa", 1, 2.50, button19, "Bebida", button19.Image);
-            AgregarProducto("Limonada", 1, 1.75, button20, "Bebida", button20.Image);
-            AgregarProducto("Monster", 1, 2.00, button21, "Bebida", button21.Image);
-            AgregarProducto("Sprite", 1, 1.50, button22, "Bebida", button22.Image);
-            AgregarProducto("Fanta", 1, 1.50, button23, "Bebida", button23.Image);
-            AgregarProducto("Pepsi", 1, 1.50, button24, "Bebida", button24.Image);
-            AgregarProducto("Leche", 1, 1.25, button25, "Bebida", button25.Image);
-            AgregarProducto("Vino", 1, 3.00, button26, "Bebida", button26.Image);
-            AgregarProducto("Cerveza", 1, 2.50, button27, "Bebida", button27.Image);
-            AgregarProducto("Sushi", 1, 3.50, button60, "Mas", button60.Image);
-            AgregarProducto("Cereal", 1, 1.75, button59, "Mas", button59.Image);
-            AgregarProducto("Queso", 1, 2.50, button58, "Mas", button58.Image);
-            AgregarProducto("Harina", 1, 1.25, button57, "Mas", button57.Image);
-            AgregarProducto("Aceite", 1, 1.75, button56, "Mas", button56.Image);
-            AgregarProducto("Huevos", 1, 1.50, button55, "Mas", button55.Image);
-            AgregarProducto("Atún", 1, 2.00, button54, "Mas", button54.Image);
-            AgregarProducto("Azúcar", 1, 1.25, button53, "Mas", button53.Image);
-            AgregarProducto("Avena", 1, 1.75, button52, "Mas", button52.Image);
-            AgregarProducto("Jalea de Fresa", 1, 1.50, button51, "Mas", button51.Image);
-            AgregarProducto("Mantquilla de Mani", 1, 1.75, button50, "Mas", button50.Image);
-            AgregarProducto("Nutella", 1, 1.75, button49, "Mas", button49.Image);
-            AgregarProducto("Mayonesa", 1, 1.50, button49, "Mas", button48.Image);
-            AgregarProducto("Bistec", 1, 3.00, button48, "Mas", button47.Image);
-            AgregarProducto("Ketchup", 1, 1.25, button46, "Mas", button46.Image);
-            AgregarProducto("Sal de Mesa", 1, 1.00, button45, "Mas", button45.Image);
+            
+
+
+        }
         
-
-
-
-
-
-
-        }
-        //metodo para agregar productos al buscador
-        private void AgregarProducto(string nombre,int cantidad, Double precio,Button button,string categoria,Image image)
-        {
-            ClaseGlobal.buscadorProductos.Agregar(
-                new Producto(nombre, 1, precio, button, categoria, button.Image)
-            );
-        }
         private void panel1_Scroll_1(object sender, ScrollEventArgs e)
         {
             //
@@ -270,17 +213,7 @@ namespace Proyecto_PED_CAFETERIA.Forms
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            string filtro = txtBuscar.Text.Trim();
-            if (string.IsNullOrEmpty(filtro))
-            {
-                ClaseGlobal.buscadorProductos.MostrarTodos();
-            }
-            else
-            {
-                ClaseGlobal.buscadorProductos.Buscar(filtro,tablaC);
-            }
-            txtBuscar.Focus();
-            txtBuscar.SelectionStart = txtBuscar.Text.Length;
+            
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -303,11 +236,6 @@ namespace Proyecto_PED_CAFETERIA.Forms
 
         private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode==Keys.Enter)
-            {
-                ClaseGlobal.buscadorProductos.Buscar(txtBuscar.Text, tablaC);
-                e.SuppressKeyPress = true;
-            }
         }
 
         private void button9_Click(object sender, EventArgs e)

@@ -34,13 +34,6 @@
             this.btnNombre = new System.Windows.Forms.Button();
             this.tablaC = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnCarrito = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -54,7 +47,7 @@
             this.btnPastel = new System.Windows.Forms.Button();
             this.btnPapas = new System.Windows.Forms.Button();
             this.btnPan = new System.Windows.Forms.Button();
-            this.btnJugo = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
             this.btnAgua = new System.Windows.Forms.Button();
@@ -64,12 +57,14 @@
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
+            this.btnJugo = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button29 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
@@ -86,6 +81,7 @@
             this.button42 = new System.Windows.Forms.Button();
             this.button43 = new System.Windows.Forms.Button();
             this.button44 = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button45 = new System.Windows.Forms.Button();
             this.button46 = new System.Windows.Forms.Button();
             this.button47 = new System.Windows.Forms.Button();
@@ -102,6 +98,8 @@
             this.button58 = new System.Windows.Forms.Button();
             this.button59 = new System.Windows.Forms.Button();
             this.button60 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCarrito = new System.Windows.Forms.Button();
             this.tablaC.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -193,134 +191,6 @@
             this.tabPage1.Text = "Comidas";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.AutoScroll = true;
-            this.tabPage2.Controls.Add(this.button25);
-            this.tabPage2.Controls.Add(this.button26);
-            this.tabPage2.Controls.Add(this.btnAgua);
-            this.tabPage2.Controls.Add(this.button27);
-            this.tabPage2.Controls.Add(this.button28);
-            this.tabPage2.Controls.Add(this.button21);
-            this.tabPage2.Controls.Add(this.button22);
-            this.tabPage2.Controls.Add(this.button23);
-            this.tabPage2.Controls.Add(this.button24);
-            this.tabPage2.Controls.Add(this.btnJugo);
-            this.tabPage2.Controls.Add(this.button17);
-            this.tabPage2.Controls.Add(this.button18);
-            this.tabPage2.Controls.Add(this.button19);
-            this.tabPage2.Controls.Add(this.button20);
-            this.tabPage2.Controls.Add(this.button15);
-            this.tabPage2.Controls.Add(this.button16);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(358, 373);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Bebidas";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.AutoScroll = true;
-            this.tabPage3.Controls.Add(this.button29);
-            this.tabPage3.Controls.Add(this.button30);
-            this.tabPage3.Controls.Add(this.button31);
-            this.tabPage3.Controls.Add(this.button32);
-            this.tabPage3.Controls.Add(this.button33);
-            this.tabPage3.Controls.Add(this.button34);
-            this.tabPage3.Controls.Add(this.button35);
-            this.tabPage3.Controls.Add(this.button36);
-            this.tabPage3.Controls.Add(this.button37);
-            this.tabPage3.Controls.Add(this.button38);
-            this.tabPage3.Controls.Add(this.button39);
-            this.tabPage3.Controls.Add(this.button40);
-            this.tabPage3.Controls.Add(this.button41);
-            this.tabPage3.Controls.Add(this.button42);
-            this.tabPage3.Controls.Add(this.button43);
-            this.tabPage3.Controls.Add(this.button44);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(358, 373);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Antojitos";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.AutoScroll = true;
-            this.tabPage4.Controls.Add(this.button45);
-            this.tabPage4.Controls.Add(this.button46);
-            this.tabPage4.Controls.Add(this.button47);
-            this.tabPage4.Controls.Add(this.button48);
-            this.tabPage4.Controls.Add(this.button49);
-            this.tabPage4.Controls.Add(this.button50);
-            this.tabPage4.Controls.Add(this.button51);
-            this.tabPage4.Controls.Add(this.button52);
-            this.tabPage4.Controls.Add(this.button53);
-            this.tabPage4.Controls.Add(this.button54);
-            this.tabPage4.Controls.Add(this.button55);
-            this.tabPage4.Controls.Add(this.button56);
-            this.tabPage4.Controls.Add(this.button57);
-            this.tabPage4.Controls.Add(this.button58);
-            this.tabPage4.Controls.Add(this.button59);
-            this.tabPage4.Controls.Add(this.button60);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(358, 373);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Mas";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(9, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 14);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Buscador:";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.txtBuscar.Location = new System.Drawing.Point(12, 25);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(146, 20);
-            this.txtBuscar.TabIndex = 14;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label3.Location = new System.Drawing.Point(517, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 14);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Ver Carrito";
-            // 
-            // btnCarrito
-            // 
-            this.btnCarrito.BackColor = System.Drawing.Color.White;
-            this.btnCarrito.BackgroundImage = global::Proyecto_PED_CAFETERIA.Properties.Resources.Carrito;
-            this.btnCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCarrito.ForeColor = System.Drawing.Color.Fuchsia;
-            this.btnCarrito.Location = new System.Drawing.Point(520, 42);
-            this.btnCarrito.Name = "btnCarrito";
-            this.btnCarrito.Size = new System.Drawing.Size(75, 42);
-            this.btnCarrito.TabIndex = 10;
-            this.btnCarrito.UseVisualStyleBackColor = false;
-            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
             // 
             // button11
             // 
@@ -492,19 +362,32 @@
             this.btnPan.UseVisualStyleBackColor = false;
             this.btnPan.Click += new System.EventHandler(this.btnPan_Click_1);
             // 
-            // btnJugo
+            // tabPage2
             // 
-            this.btnJugo.BackColor = System.Drawing.Color.Transparent;
-            this.btnJugo.BackgroundImage = global::Proyecto_PED_CAFETERIA.Properties.Resources.Jugo2;
-            this.btnJugo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnJugo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnJugo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJugo.Location = new System.Drawing.Point(252, 267);
-            this.btnJugo.Name = "btnJugo";
-            this.btnJugo.Size = new System.Drawing.Size(65, 58);
-            this.btnJugo.TabIndex = 1;
-            this.btnJugo.UseVisualStyleBackColor = false;
-            this.btnJugo.Click += new System.EventHandler(this.btnJugo_Click);
+            this.tabPage2.AutoScroll = true;
+            this.tabPage2.Controls.Add(this.button25);
+            this.tabPage2.Controls.Add(this.button26);
+            this.tabPage2.Controls.Add(this.btnAgua);
+            this.tabPage2.Controls.Add(this.button27);
+            this.tabPage2.Controls.Add(this.button28);
+            this.tabPage2.Controls.Add(this.button21);
+            this.tabPage2.Controls.Add(this.button22);
+            this.tabPage2.Controls.Add(this.button23);
+            this.tabPage2.Controls.Add(this.button24);
+            this.tabPage2.Controls.Add(this.btnJugo);
+            this.tabPage2.Controls.Add(this.button17);
+            this.tabPage2.Controls.Add(this.button18);
+            this.tabPage2.Controls.Add(this.button19);
+            this.tabPage2.Controls.Add(this.button20);
+            this.tabPage2.Controls.Add(this.button15);
+            this.tabPage2.Controls.Add(this.button16);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(358, 373);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Bebidas";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button25
             // 
@@ -623,6 +506,20 @@
             this.button24.UseVisualStyleBackColor = true;
             this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
+            // btnJugo
+            // 
+            this.btnJugo.BackColor = System.Drawing.Color.Transparent;
+            this.btnJugo.BackgroundImage = global::Proyecto_PED_CAFETERIA.Properties.Resources.Jugo2;
+            this.btnJugo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnJugo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnJugo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJugo.Location = new System.Drawing.Point(252, 267);
+            this.btnJugo.Name = "btnJugo";
+            this.btnJugo.Size = new System.Drawing.Size(65, 58);
+            this.btnJugo.TabIndex = 1;
+            this.btnJugo.UseVisualStyleBackColor = false;
+            this.btnJugo.Click += new System.EventHandler(this.btnJugo_Click);
+            // 
             // button17
             // 
             this.button17.BackgroundImage = global::Proyecto_PED_CAFETERIA.Properties.Resources._8_cafe_helado;
@@ -700,6 +597,33 @@
             this.button16.TabIndex = 2;
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.AutoScroll = true;
+            this.tabPage3.Controls.Add(this.button29);
+            this.tabPage3.Controls.Add(this.button30);
+            this.tabPage3.Controls.Add(this.button31);
+            this.tabPage3.Controls.Add(this.button32);
+            this.tabPage3.Controls.Add(this.button33);
+            this.tabPage3.Controls.Add(this.button34);
+            this.tabPage3.Controls.Add(this.button35);
+            this.tabPage3.Controls.Add(this.button36);
+            this.tabPage3.Controls.Add(this.button37);
+            this.tabPage3.Controls.Add(this.button38);
+            this.tabPage3.Controls.Add(this.button39);
+            this.tabPage3.Controls.Add(this.button40);
+            this.tabPage3.Controls.Add(this.button41);
+            this.tabPage3.Controls.Add(this.button42);
+            this.tabPage3.Controls.Add(this.button43);
+            this.tabPage3.Controls.Add(this.button44);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(358, 373);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Antojitos";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button29
             // 
@@ -909,6 +833,33 @@
             this.button44.UseVisualStyleBackColor = true;
             this.button44.Click += new System.EventHandler(this.button44_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.AutoScroll = true;
+            this.tabPage4.Controls.Add(this.button45);
+            this.tabPage4.Controls.Add(this.button46);
+            this.tabPage4.Controls.Add(this.button47);
+            this.tabPage4.Controls.Add(this.button48);
+            this.tabPage4.Controls.Add(this.button49);
+            this.tabPage4.Controls.Add(this.button50);
+            this.tabPage4.Controls.Add(this.button51);
+            this.tabPage4.Controls.Add(this.button52);
+            this.tabPage4.Controls.Add(this.button53);
+            this.tabPage4.Controls.Add(this.button54);
+            this.tabPage4.Controls.Add(this.button55);
+            this.tabPage4.Controls.Add(this.button56);
+            this.tabPage4.Controls.Add(this.button57);
+            this.tabPage4.Controls.Add(this.button58);
+            this.tabPage4.Controls.Add(this.button59);
+            this.tabPage4.Controls.Add(this.button60);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(358, 373);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Mas";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // button45
             // 
             this.button45.BackgroundImage = global::Proyecto_PED_CAFETERIA.Properties.Resources._16;
@@ -1117,6 +1068,32 @@
             this.button60.UseVisualStyleBackColor = true;
             this.button60.Click += new System.EventHandler(this.button60_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label3.Location = new System.Drawing.Point(517, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 14);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Ver Carrito";
+            // 
+            // btnCarrito
+            // 
+            this.btnCarrito.BackColor = System.Drawing.Color.White;
+            this.btnCarrito.BackgroundImage = global::Proyecto_PED_CAFETERIA.Properties.Resources.Carrito;
+            this.btnCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarrito.ForeColor = System.Drawing.Color.Fuchsia;
+            this.btnCarrito.Location = new System.Drawing.Point(520, 42);
+            this.btnCarrito.Name = "btnCarrito";
+            this.btnCarrito.Size = new System.Drawing.Size(75, 42);
+            this.btnCarrito.TabIndex = 10;
+            this.btnCarrito.UseVisualStyleBackColor = false;
+            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
+            // 
             // FrmPedirOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1127,10 +1104,8 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.nombreP);
             this.Controls.Add(this.btnCarrito);
-            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.tablaC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPedirOrden";
@@ -1219,8 +1194,6 @@
         private System.Windows.Forms.Button button58;
         private System.Windows.Forms.Button button59;
         private System.Windows.Forms.Button button60;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnCarrito;
         private System.Windows.Forms.Label label3;
     }
