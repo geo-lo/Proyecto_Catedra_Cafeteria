@@ -174,5 +174,10 @@ namespace Proyecto_PED_CAFETERIA.Forms
         {
             AbrirForms(new Proveedores());
         }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            AbrirForms(new frmDashboard());
+        }
     }
 }
